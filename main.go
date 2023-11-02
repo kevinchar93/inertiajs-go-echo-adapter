@@ -41,9 +41,11 @@ func configureMiddleware(e *echo.Echo) {
 func configureRoutes(e *echo.Echo) {
 	e.GET("/", func(ctx echo.Context) error {
 
-		data := map[string]interface{}{}
+		props := map[string]interface{}{
+			"exampleProp": "Let's a go!",
+		}
 
-		return ctx.Render(http.StatusOK, "Index", data)
+		return ctx.Render(http.StatusOK, "Index", props)
 	})
 }
 

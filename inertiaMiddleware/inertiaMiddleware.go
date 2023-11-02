@@ -2,17 +2,17 @@ package inertiaMiddleware
 
 import (
 	"encoding/json"
+	"html/template"
 	"io"
 	"log"
 	"os"
-	"text/template"
 
 	"github.com/labstack/echo/v4"
 )
 
 type PageTemplateAssets struct {
-	jsFiles  []string
-	cssFiles []string
+	jsFiles  []template.HTMLAttr
+	cssFiles []template.HTMLAttr
 }
 
 func NewPageTemplateAssets() (p *PageTemplateAssets) {
@@ -20,8 +20,8 @@ func NewPageTemplateAssets() (p *PageTemplateAssets) {
 
 	if os.Getenv("BUILD_ENV") == "development" {
 		p.jsFiles = append(p.jsFiles,
-			"http://localhost:5173/@vite/client",
-			"http://localhost:5173/src/main.jsx")
+			template.HTMLAttr("http://localhost:5173/@vite/client"),
+			template.HTMLAttr("http://localhost:5173/src/main.jsx"))
 
 		return p
 	}
@@ -66,7 +66,7 @@ func (inertiaInfo *InertiaInfo) Render(w io.Writer, name string, props interface
 	}
 
 	renderData := map[string]interface{}{
-		"pageObject":    string(pageJson),
+		"pageObject":    template.HTMLAttr(string(pageJson)),
 		"jsFiles":       inertiaInfo.pageTemplateAssets.jsFiles,
 		"cssFiles":      inertiaInfo.pageTemplateAssets.cssFiles,
 		"isDevelopment": os.Getenv("BUILD_ENV") == "development",
