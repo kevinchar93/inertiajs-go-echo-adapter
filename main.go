@@ -47,6 +47,15 @@ func configureRoutes(e *echo.Echo) {
 
 		return ctx.Render(http.StatusOK, "Index", props)
 	})
+
+	e.GET("/example-page", func(ctx echo.Context) error {
+
+		props := map[string]interface{}{
+			"phrase": "Don't panic!",
+		}
+
+		return ctx.Render(http.StatusOK, "ExamplePage", props)
+	})
 }
 
 func main() {

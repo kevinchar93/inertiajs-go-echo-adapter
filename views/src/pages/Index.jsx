@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import './Index.css'
+import { Link } from "@inertiajs/react";
 
 function Index({exampleProp}) {
   const [count, setCount] = useState(0)
@@ -17,6 +18,9 @@ function Index({exampleProp}) {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <h2>
+        <Link href='/example-page'>Link to example page</Link>
+      </h2>
       <h2>{exampleProp}</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
