@@ -1,12 +1,13 @@
 package routes
 
 import (
+	"inertia-echo/pokemondb"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
 )
 
-func ConfigureRoutes(e *echo.Echo) {
+func ConfigureRoutes(e *echo.Echo, db map[int]pokemondb.PokemonInfo) {
 	e.GET("/", func(ctx echo.Context) error {
 
 		props := map[string]interface{}{
