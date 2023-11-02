@@ -12,7 +12,9 @@ import (
 )
 
 func configureMiddleware(e *echo.Echo) {
-	e.Use(inertiaMiddleware.InertiaMiddleware(e))
+
+	assetVersion := "1"
+	e.Use(inertiaMiddleware.InertiaMiddleware(e, assetVersion))
 
 	e.Static("/", "views/public")
 
