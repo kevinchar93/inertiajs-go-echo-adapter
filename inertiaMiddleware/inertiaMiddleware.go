@@ -3,24 +3,39 @@ package inertiaMiddleware
 import (
 	"io"
 	"log"
+	"os"
 	"text/template"
 
 	"github.com/labstack/echo/v4"
 )
 
-type InertiaInfo struct {
-	pageTemplate *template.Template
+type PageTemplateAssets struct {
+	jsFiles  []string
+	cssFiles []string
 }
 
-func (inertiaInfo *InertiaInfo) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
+func NewPageTemplateAssets() (p *PageTemplateAssets) {
+	p = new(PageTemplateAssets)
 
-	renderData := map[string]interface{}{}
+	if os.Getenv("BUILD_ENV") == "development" {
+		p.jsFiles = append(p.jsFiles,
+			"http://localhost:5173/@vite/client",
+			"http://localhost:5173/src/main.jsx")
 
-	return inertiaInfo.pageTemplate.Execute(w, renderData)
+		return p
+	}
+	return p
+}
+
+type InertiaInfo struct {
+	pageTemplate       *template.Template
+	pageTemplateAssets *PageTemplateAssets
 }
 
 func RegisterInertiaAdapter(echoInstance *echo.Echo) {
 	var inertiaInfo *InertiaInfo = new(InertiaInfo)
+
+	inertiaInfo.pageTemplateAssets = NewPageTemplateAssets()
 
 	template, err := template.New("app.html").ParseFiles("app.html")
 	if err != nil {
@@ -29,6 +44,17 @@ func RegisterInertiaAdapter(echoInstance *echo.Echo) {
 
 	inertiaInfo.pageTemplate = template
 	echoInstance.Renderer = inertiaInfo
+}
+
+func (inertiaInfo *InertiaInfo) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
+
+	renderData := map[string]interface{}{
+		"jsFiles":       inertiaInfo.pageTemplateAssets.jsFiles,
+		"cssFiles":      inertiaInfo.pageTemplateAssets.cssFiles,
+		"isDevelopment": os.Getenv("BUILD_ENV") == "development",
+	}
+
+	return inertiaInfo.pageTemplate.Execute(w, renderData)
 }
 
 func InertiaMiddleware(e *echo.Echo) echo.MiddlewareFunc {

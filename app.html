@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{if .isDevelopment}}
+    <script type="module">
+        import RefreshRuntime from 'http://localhost:5173/@react-refresh'
+        RefreshRuntime.injectIntoGlobalHook(window)
+        window.$RefreshReg$ = () => {}
+        window.$RefreshSig$ = () => (type) => type
+        window.__vite_plugin_react_preamble_installed__ = true
+    </script>
+    {{end}}
+
+    {{range .jsFiles}}
+        <script type="module" crossorigin src="{{.}}"></script>
+    {{end}}
+
+    {{range .cssFiles}}
+        <link rel="stylesheet" href="/{{.}}"></script>
+    {{end}}
 </head>
 <body>
-    <div>Hello, World 34!</div>
+    <div id="app" data-page='{"component": "Index", "url": "/", "props": {"exampleProp": "Hello, World!"}}'></div>
 </body>
 </html>
