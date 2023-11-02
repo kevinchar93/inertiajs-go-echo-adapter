@@ -2,13 +2,19 @@ import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import './Index.css'
-import { Link } from "@inertiajs/react";
+import { Link, Head } from "@inertiajs/react";
 
-function Index({exampleProp}) {
+function Index({ header, exampleProp }) {
   const [count, setCount] = useState(0)
+
+  const { title, meta } = header
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+        <meta name={meta.name} content={meta.content} />
+      </Head>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
