@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+.img-container {
+    text-align: center;
+}
+
+ul.stats-list > li {
+    font-weight: bold;
+}
+
+ul.stats-list > li > p {
+    color: orangered;
+    display: inline;
+}
+
+.links-container {
+    text-align: center;
+}
+
+.links > a {
+    margin-left: 12px;
+    margin-right: 12px;
+}

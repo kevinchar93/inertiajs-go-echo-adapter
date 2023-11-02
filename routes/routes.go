@@ -5,6 +5,7 @@ import (
 	"inertia-echo/page"
 	"inertia-echo/pokemondb"
 	"net/http"
+	"strconv"
 
 	"slices"
 
@@ -38,12 +39,31 @@ func ConfigureRoutes(e *echo.Echo, db map[int]pokemondb.PokemonInfo) {
 		return ctx.Render(http.StatusOK, "Index", props)
 	})
 
-	e.GET("/example-page", func(ctx echo.Context) error {
+	e.GET("/pokemon/:id", func(ctx echo.Context) error {
 
-		props := map[string]interface{}{
-			"phrase": "Don't panic!",
+		id, _ := strconv.Atoi(ctx.Param("id"))
+		pokemon := db[id]
+		name := pokemon.Name.English
+
+		clampNextOrPrevPokemon := func(id int) int {
+			if id <= 0 || id >= len(db)-1 {
+				return -1
+			}
+			return id
 		}
 
-		return ctx.Render(http.StatusOK, "ExamplePage", props)
+		header := page.NewPageHeader(name, "Pages for "+name, "Pages with stats & info about "+name)
+
+		props := map[string]interface{}{
+			"header":      header,
+			"number":      id,
+			"name":        name,
+			"nextPokemon": clampNextOrPrevPokemon(id + 1),
+			"prevPokemon": clampNextOrPrevPokemon(id - 1),
+			"type":        pokemon.Type,
+			"stats":       pokemon.Base,
+		}
+
+		return ctx.Render(http.StatusOK, "Pokemon", props)
 	})
 }
