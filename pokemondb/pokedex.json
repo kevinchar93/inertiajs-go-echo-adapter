@@ -1,0 +1,534 @@
+[{
+    "id": 1,
+    "name": {
+      "english": "Bulbasaur",
+      "japanese": "フシギダネ",
+      "chinese": "妙蛙种子",
+      "french": "Bulbizarre"
+    },
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "base": {
+      "HP": 45,
+      "Attack": 49,
+      "Defense": 49,
+      "spAttack": 65,
+      "spDefense": 65,
+      "Speed": 45
+    }
+  },
+  {
+    "id": 2,
+    "name": {
+      "english": "Ivysaur",
+      "japanese": "フシギソウ",
+      "chinese": "妙蛙草",
+      "french": "Herbizarre"
+    },
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "base": {
+      "HP": 60,
+      "Attack": 62,
+      "Defense": 63,
+      "spAttack": 80,
+      "spDefense": 80,
+      "Speed": 60
+    }
+  },
+  {
+    "id": 3,
+    "name": {
+      "english": "Venusaur",
+      "japanese": "フシギバナ",
+      "chinese": "妙蛙花",
+      "french": "Florizarre"
+    },
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "base": {
+      "HP": 80,
+      "Attack": 82,
+      "Defense": 83,
+      "spAttack": 100,
+      "spDefense": 100,
+      "Speed": 80
+    }
+  },
+  {
+    "id": 4,
+    "name": {
+      "english": "Charmander",
+      "japanese": "ヒトカゲ",
+      "chinese": "小火龙",
+      "french": "Salamèche"
+    },
+    "type": [
+      "Fire"
+    ],
+    "base": {
+      "HP": 39,
+      "Attack": 52,
+      "Defense": 43,
+      "spAttack": 60,
+      "spDefense": 50,
+      "Speed": 65
+    }
+  },
+  {
+    "id": 5,
+    "name": {
+      "english": "Charmeleon",
+      "japanese": "リザード",
+      "chinese": "火恐龙",
+      "french": "Reptincel"
+    },
+    "type": [
+      "Fire"
+    ],
+    "base": {
+      "HP": 58,
+      "Attack": 64,
+      "Defense": 58,
+      "spAttack": 80,
+      "spDefense": 65,
+      "Speed": 80
+    }
+  },
+  {
+    "id": 6,
+    "name": {
+      "english": "Charizard",
+      "japanese": "リザードン",
+      "chinese": "喷火龙",
+      "french": "Dracaufeu"
+    },
+    "type": [
+      "Fire",
+      "Flying"
+    ],
+    "base": {
+      "HP": 78,
+      "Attack": 84,
+      "Defense": 78,
+      "spAttack": 109,
+      "spDefense": 85,
+      "Speed": 100
+    }
+  },
+  {
+    "id": 7,
+    "name": {
+      "english": "Squirtle",
+      "japanese": "ゼニガメ",
+      "chinese": "杰尼龟",
+      "french": "Carapuce"
+    },
+    "type": [
+      "Water"
+    ],
+    "base": {
+      "HP": 44,
+      "Attack": 48,
+      "Defense": 65,
+      "spAttack": 50,
+      "spDefense": 64,
+      "Speed": 43
+    }
+  },
+  {
+    "id": 8,
+    "name": {
+      "english": "Wartortle",
+      "japanese": "カメール",
+      "chinese": "卡咪龟",
+      "french": "Carabaffe"
+    },
+    "type": [
+      "Water"
+    ],
+    "base": {
+      "HP": 59,
+      "Attack": 63,
+      "Defense": 80,
+      "spAttack": 65,
+      "spDefense": 80,
+      "Speed": 58
+    }
+  },
+  {
+    "id": 9,
+    "name": {
+      "english": "Blastoise",
+      "japanese": "カメックス",
+      "chinese": "水箭龟",
+      "french": "Tortank"
+    },
+    "type": [
+      "Water"
+    ],
+    "base": {
+      "HP": 79,
+      "Attack": 83,
+      "Defense": 100,
+      "spAttack": 85,
+      "spDefense": 105,
+      "Speed": 78
+    }
+  },
+  {
+    "id": 10,
+    "name": {
+      "english": "Caterpie",
+      "japanese": "キャタピー",
+      "chinese": "绿毛虫",
+      "french": "Chenipan"
+    },
+    "type": [
+      "Bug"
+    ],
+    "base": {
+      "HP": 45,
+      "Attack": 30,
+      "Defense": 35,
+      "spAttack": 20,
+      "spDefense": 20,
+      "Speed": 45
+    }
+  },
+  {
+    "id": 11,
+    "name": {
+      "english": "Metapod",
+      "japanese": "トランセル",
+      "chinese": "铁甲蛹",
+      "french": "Chrysacier"
+    },
+    "type": [
+      "Bug"
+    ],
+    "base": {
+      "HP": 50,
+      "Attack": 20,
+      "Defense": 55,
+      "spAttack": 25,
+      "spDefense": 25,
+      "Speed": 30
+    }
+  },
+  {
+    "id": 12,
+    "name": {
+      "english": "Butterfree",
+      "japanese": "バタフリー",
+      "chinese": "巴大蝶",
+      "french": "Papilusion"
+    },
+    "type": [
+      "Bug",
+      "Flying"
+    ],
+    "base": {
+      "HP": 60,
+      "Attack": 45,
+      "Defense": 50,
+      "spAttack": 90,
+      "spDefense": 80,
+      "Speed": 70
+    }
+  },
+  {
+    "id": 13,
+    "name": {
+      "english": "Weedle",
+      "japanese": "ビードル",
+      "chinese": "独角虫",
+      "french": "Aspicot"
+    },
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "base": {
+      "HP": 40,
+      "Attack": 35,
+      "Defense": 30,
+      "spAttack": 20,
+      "spDefense": 20,
+      "Speed": 50
+    }
+  },
+  {
+    "id": 14,
+    "name": {
+      "english": "Kakuna",
+      "japanese": "コクーン",
+      "chinese": "铁壳蛹",
+      "french": "Coconfort"
+    },
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "base": {
+      "HP": 45,
+      "Attack": 25,
+      "Defense": 50,
+      "spAttack": 25,
+      "spDefense": 25,
+      "Speed": 35
+    }
+  },
+  {
+    "id": 15,
+    "name": {
+      "english": "Beedrill",
+      "japanese": "スピアー",
+      "chinese": "大针蜂",
+      "french": "Dardargnan"
+    },
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "base": {
+      "HP": 65,
+      "Attack": 90,
+      "Defense": 40,
+      "spAttack": 45,
+      "spDefense": 80,
+      "Speed": 75
+    }
+  },
+  {
+    "id": 16,
+    "name": {
+      "english": "Pidgey",
+      "japanese": "ポッポ",
+      "chinese": "波波",
+      "french": "Roucool"
+    },
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "base": {
+      "HP": 40,
+      "Attack": 45,
+      "Defense": 40,
+      "spAttack": 35,
+      "spDefense": 35,
+      "Speed": 56
+    }
+  },
+  {
+    "id": 17,
+    "name": {
+      "english": "Pidgeotto",
+      "japanese": "ピジョン",
+      "chinese": "比比鸟",
+      "french": "Roucoups"
+    },
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "base": {
+      "HP": 63,
+      "Attack": 60,
+      "Defense": 55,
+      "spAttack": 50,
+      "spDefense": 50,
+      "Speed": 71
+    }
+  },
+  {
+    "id": 18,
+    "name": {
+      "english": "Pidgeot",
+      "japanese": "ピジョット",
+      "chinese": "大比鸟",
+      "french": "Roucarnage"
+    },
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "base": {
+      "HP": 83,
+      "Attack": 80,
+      "Defense": 75,
+      "spAttack": 70,
+      "spDefense": 70,
+      "Speed": 101
+    }
+  },
+  {
+    "id": 19,
+    "name": {
+      "english": "Rattata",
+      "japanese": "コラッタ",
+      "chinese": "小拉达",
+      "french": "Rattata"
+    },
+    "type": [
+      "Normal"
+    ],
+    "base": {
+      "HP": 30,
+      "Attack": 56,
+      "Defense": 35,
+      "spAttack": 25,
+      "spDefense": 35,
+      "Speed": 72
+    }
+  },
+  {
+    "id": 20,
+    "name": {
+      "english": "Raticate",
+      "japanese": "ラッタ",
+      "chinese": "拉达",
+      "french": "Rattatac"
+    },
+    "type": [
+      "Normal"
+    ],
+    "base": {
+      "HP": 55,
+      "Attack": 81,
+      "Defense": 60,
+      "spAttack": 50,
+      "spDefense": 70,
+      "Speed": 97
+    }
+  },
+  {
+    "id": 21,
+    "name": {
+      "english": "Spearow",
+      "japanese": "オニスズメ",
+      "chinese": "烈雀",
+      "french": "Piafabec"
+    },
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "base": {
+      "HP": 40,
+      "Attack": 60,
+      "Defense": 30,
+      "spAttack": 31,
+      "spDefense": 31,
+      "Speed": 70
+    }
+  },
+  {
+    "id": 22,
+    "name": {
+      "english": "Fearow",
+      "japanese": "オニドリル",
+      "chinese": "大嘴雀",
+      "french": "Rapasdepic"
+    },
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "base": {
+      "HP": 65,
+      "Attack": 90,
+      "Defense": 65,
+      "spAttack": 61,
+      "spDefense": 61,
+      "Speed": 100
+    }
+  },
+  {
+    "id": 23,
+    "name": {
+      "english": "Ekans",
+      "japanese": "アーボ",
+      "chinese": "阿柏蛇",
+      "french": "Abo"
+    },
+    "type": [
+      "Poison"
+    ],
+    "base": {
+      "HP": 35,
+      "Attack": 60,
+      "Defense": 44,
+      "spAttack": 40,
+      "spDefense": 54,
+      "Speed": 55
+    }
+  },
+  {
+    "id": 24,
+    "name": {
+      "english": "Arbok",
+      "japanese": "アーボック",
+      "chinese": "阿柏怪",
+      "french": "Arbok"
+    },
+    "type": [
+      "Poison"
+    ],
+    "base": {
+      "HP": 60,
+      "Attack": 95,
+      "Defense": 69,
+      "spAttack": 65,
+      "spDefense": 79,
+      "Speed": 80
+    }
+  },
+  {
+    "id": 25,
+    "name": {
+      "english": "Pikachu",
+      "japanese": "ピカチュウ",
+      "chinese": "皮卡丘",
+      "french": "Pikachu"
+    },
+    "type": [
+      "Electric"
+    ],
+    "base": {
+      "HP": 35,
+      "Attack": 55,
+      "Defense": 40,
+      "spAttack": 50,
+      "spDefense": 50,
+      "Speed": 90
+    }
+  },
+  {
+    "id": 26,
+    "name": {
+      "english": "Raichu",
+      "japanese": "ライチュウ",
+      "chinese": "雷丘",
+      "french": "Raichu"
+    },
+    "type": [
+      "Electric"
+    ],
+    "base": {
+      "HP": 60,
+      "Attack": 90,
+      "Defense": 55,
+      "spAttack": 90,
+      "spDefense": 80,
+      "Speed": 110
+    }
+  }
+]
