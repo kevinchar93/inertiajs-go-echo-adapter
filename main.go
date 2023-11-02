@@ -12,8 +12,11 @@ func configureMiddleware(e *echo.Echo) {
 }
 
 func configureRoutes(e *echo.Echo) {
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
+	e.GET("/", func(ctx echo.Context) error {
+
+		data := map[string]interface{}{}
+
+		return ctx.Render(http.StatusOK, "Index", data)
 	})
 }
 
