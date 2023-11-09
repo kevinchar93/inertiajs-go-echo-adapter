@@ -4,7 +4,7 @@ A simple Pokédex that shows off a partial implementation of the [Inertia.js](ht
 
 This project was made along with the video ["Inertia.js - How it works"](https://www.youtube.com/watch?v=MmQgm9EGP_U) to illustrate ***in code*** how Inertia.js works.
 
-There is a video series ["xyz"](linkhere), that shows the building of this project with commentary.
+There is a video series ["Let's Build An Inertia.js Adapter in Go"](https://www.youtube.com/watch?v=2THwHiRf8Vg&list=PLSkOWppXkXWRELTBMtwLenv88_Q-aJVcm), that shows the building of this project with commentary.
 
 ## Prerequisites
 
