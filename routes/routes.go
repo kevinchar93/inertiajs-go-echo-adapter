@@ -46,7 +46,7 @@ func ConfigureRoutes(e *echo.Echo, db map[int]pokemondb.PokemonInfo) {
 		name := pokemon.Name.English
 
 		clampNextOrPrevPokemon := func(id int) int {
-			if id <= 0 || id >= len(db)-1 {
+			if id <= 0 || id >= len(db)+1 {
 				return -1
 			}
 			return id
